@@ -1,71 +1,83 @@
 # clearsight
 
-Colorschemes for **red-green colour blindness (strong deutan)**. Each one was optimised against a vision model
-that was *measured*, not guessed. Every syntax role, diagnostic, git sign and ANSI colour is placed where a
-deuteranope can still tell it apart, while keeping a calm, good-looking palette for everyone else.
+Colourschemes for **red-green colour blindness (strong deutan)**, optimised against a *measured* vision model.
+Every syntax role, diagnostic, git sign and terminal colour sits where a deuteranope can still tell it apart,
+while the palettes stay calm and good-looking for everyone.
 
-| Scheme | Character | Text contrast | Syntax distinctions kept¹ | Closest core pair² | Error vs warning² | Added vs deleted² | Terminal worst pair² |
-|---|---|---|---|---|---|---|---|
-| **Haze** | dark, muted, low-contrast, warm-grey | 7.1:1 | 100% | 14.4 | 24.9 | 44.8 | 19.4 |
-| **Fog** | dark, muted, low-contrast, cool-grey | 7.0:1 | 100% | 11.9 | 24.9 | 43.5 | 18.7 |
-| **Abyss** | dark, near-black, oled, high-clarity | 11.2:1 | 98% | 16.9 | 25.1 | 62.5 | 20.6 |
-| **Dusk** | dark, soft, violet, rose-pine-like | 11.5:1 | 100% | 14.7 | 25.0 | 51.4 | 20.4 |
+| Scheme | Variant | Character | Text contrast | Syntax distinctions kept¹ | Closest core pair² | Error vs warning² | Added vs deleted² | Terminal worst pair² |
+|---|---|---|---|---|---|---|---|---|
+| **Haze** | dark | muted, low-contrast, warm-grey | 7.1:1 | 100% | 14.4 | 24.9 | 44.8 | 19.4 |
+| **Fog** | dark | muted, low-contrast, cool-grey | 7.0:1 | 100% | 11.9 | 24.9 | 43.5 | 18.7 |
+| **Abyss** | dark | near-black, oled, high-clarity | 11.2:1 | 98% | 16.9 | 25.1 | 62.5 | 20.6 |
+| **Dusk** | dark | soft, violet | 11.5:1 | 100% | 14.7 | 25.0 | 51.4 | 20.4 |
+| **Haze Light** | light | muted, low-contrast, warm-grey | 7.7:1 | 100% | 15.4 | 25.1 | 53.1 | 19.7 |
+| **Fog Light** | light | muted, low-contrast, cool-grey | 8.1:1 | 90% | 13.6 | 25.1 | 51.0 | 14.8 |
+| **Abyss Light** | light | high-clarity, crisp | 14.7:1 | 90% | 16.7 | 25.2 | 51.9 | 17.5 |
+| **Dusk Light** | light | soft, rose | 6.5:1 | 100% | 11.8 | 25.3 | 36.9 | 19.0 |
 
-¹ Share of the role pairs the scheme intends to differ that still differ in deutan vision.
-² CIEDE2000 between *simulated* colours (≥ 15 comfortable, 10–15 fine, < 5 easily confused).
-For comparison, the best ready-made editor themes reach 6.9 (Rosé Pine) and 8.6 (Terafox) for the closest core pair,
-and none of 819 tested terminal themes reaches 18 without neon colours. See [docs/vision-model.md](docs/vision-model.md).
-
-Light counterparts (Haze Light, Fog Light, Abyss Light, Dusk Light) are in progress.
-
-## Layout
-
-```
-haze/ fog/ abyss/ dusk/
-  colorschemes.json   tagged palette, semantic roles, terminal colours, full Neovim highlight map, scores
-  alacritty.toml      Alacritty colours
-  kitty.conf          kitty colours
-colors/ lua/          Neovim plugin (coming soon; installable with lazy.nvim)
-tools/                colour maths and generators (Python 3, no dependencies)
-docs/                 vision model and scoring method
-```
+¹ Share of the role pairs a scheme intends to differ that still differ in deutan vision.
+² CIEDE2000 between simulated colours (≥ 15 comfortable, 10–15 fine, < 5 easily confused). See [docs/vision-model.md](docs/vision-model.md).
 
 ## Install
 
-**Alacritty**: in `~/.config/alacritty/alacritty.toml`:
-```toml
-[general]
-import = ["~/path/to/clearsight/haze/alacritty.toml"]
-```
-
-**kitty**: in `~/.config/kitty/kitty.conf`:
-```
-include ~/path/to/clearsight/haze/kitty.conf
-```
-
-**Neovim**: coming soon:
+### Neovim (lazy.nvim)
 ```lua
-{ "<you>/clearsight", lazy = false, priority = 1000, config = function() vim.cmd.colorscheme("haze") end }
+{
+  "<owner>/clearsight",
+  lazy = false,
+  priority = 1000,
+  opts = {                 -- all optional
+    transparent = false,
+    italics = true,
+    bold = true,
+    terminal_colors = true,
+    on_highlights = function(groups, palette) end,   -- tweak groups before they are applied
+    overrides = {},         -- { GroupName = { fg = "#hex", ... } }
+  },
+  config = function(_, opts)
+    require("clearsight").setup(opts)
+    vim.cmd.colorscheme("haze")   -- haze fog abyss dusk, and each with -light
+  end,
+}
 ```
+lualine: `require("lualine").setup({ options = { theme = "haze" } })`.
+Vim: put the repo on `runtimepath` and run `:colorscheme haze` (the same `colors/*.vim` files work in Vim).
 
-## `colorschemes.json`
+### Terminals and CLI tools
+Replace `haze` with any scheme folder.
 
-| Key | Contents |
-|---|---|
-| `id`, `name`, `variant`, `tags`, `description` | metadata (`tags` e.g. `muted`, `low-contrast`, `deutan-optimised`) |
-| `palette.<name>` | `hex`, `oklch` and `tags` listing every place the colour is used (`syntax.keyword`, `terminal.blue`, `diagnostic.error`, …) |
-| `terminal` | background, foreground, cursor, selection and the 16 ANSI colours (`normal` / `bright`) |
-| `syntax_styles` | italic/bold per role |
-| `highlights.<group>` | Neovim highlight groups incl. treesitter captures; each colour has `hex` and the palette `ref` |
-| `scores` | editor and terminal separation scores for the target vision |
+| Tool | File | How |
+|---|---|---|
+| Alacritty | `haze/alacritty.toml` | `[general] import = ["…/clearsight/haze/alacritty.toml"]` |
+| kitty | `haze/kitty.conf` | `include …/clearsight/haze/kitty.conf` |
+| WezTerm | `haze/wezterm.toml` | add the folder to `color_scheme_dirs`, set `color_scheme = "Haze"` |
+| Ghostty | `haze/ghostty` | copy to `~/.config/ghostty/themes/Haze`, set `theme = Haze` |
+| Rio | `haze/rio.toml` | copy to `~/.config/rio/themes/haze.toml`, set `theme = "haze"` |
+| tmux | `haze/tmux.conf` | `source-file …/clearsight/haze/tmux.conf`; palette available as `#{@clearsight_accent}` etc. |
+| fish | `haze/fish.theme` | copy to `~/.config/fish/themes/Haze.theme`, then `fish_config theme save Haze` |
+| starship | `haze/starship.toml` | merge into `starship.toml`, set `palette = "haze"` |
+| fzf | `haze/fzf.sh`, `haze/fzf.fish` | `source` it from your shell config |
+| delta | `haze/delta.gitconfig` | `[include] path = …/clearsight/haze/delta.gitconfig`, then `[delta] features = clearsight-haze` |
+| lazygit | `haze/lazygit.yml` | merge the `gui.theme` block into `~/.config/lazygit/config.yml` |
+| eza | `haze/eza.yml` | copy to `~/.config/eza/theme.yml` (or point `EZA_CONFIG_DIR` at a folder containing it) |
+| yazi | `haze/yazi/haze.yazi/` | copy to `~/.config/yazi/flavors/`, set `[flavor] dark = "haze"` in `theme.toml` |
 
-## Regenerate
+## How it's built
+Everything except `<id>/recipe.toml` and `<id>/colorschemes.json` is **generated** by
+[colorscheme-tools](../colorscheme-tools) (`cstools`) from `colorschemes.json`, the single source of truth:
 
 ```sh
-python3 tools/gen_schemes.py --only haze,fog,abyss,dusk   # optimise editor roles -> tools/build/custom_schemes.json
-python3 tools/export_schemes.py                           # optimise terminal colours + write the scheme folders
+cstools build .            # regenerate every target listed in colorschemes.toml
+cstools build . --check    # CI: fail if generated files are stale
+cstools validate */colorschemes.json
+cstools score haze/colorschemes.json
+cstools inspect haze/colorschemes.json   # which roles use each base colour
+cstools optimize haze/recipe.toml -o haze/colorschemes.json   # re-run the design optimiser (changes colours)
 ```
-Styles (background, foreground, hue anchors, limits) are defined at the top of `tools/gen_schemes.py`.
+
+`colorschemes.json` stores each colour **once** in `palette` (readable names such as `blue_deep`, `sand`);
+roles, terminal colours and derived colours (cursorline, selection, diff backgrounds) are references or formulas.
+Change a base colour, run `cstools build .`, and every target follows.
 
 ## License
 MIT
