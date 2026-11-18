@@ -1,0 +1,56 @@
+# Design recipe for Fog Light: input to `cstools optimize`.
+# colorschemes.json in this folder is the generated source of truth for every target.
+schema_version = 1
+id = "fog-light"
+name = "Fog Light"
+variant = "light"
+family = "fog"
+description = "Fog in daylight: cool grey-blue paper with muted ink accents that rely on lightness steps."
+tags = ["light", "muted", "low-contrast", "cool-grey"]
+
+[base]
+bg = "#e4e7eb"
+bg_alt = "#d9dde2"
+fg = "#3d434b"
+comment = "#868d96"
+fg_dim = "#646b74"
+
+[styles]
+comment_italic = true
+keyword_italic = true
+parameter_italic = true
+
+[editor]
+contrast_min = 3.6
+chroma_max = 0.1
+hue_tolerance = 35
+lightness_min = 0.38
+lightness_max = 0.66
+
+[editor.anchors]
+keyword = "#565fa6"
+function = "#2f73a8"
+string = "#87692a"
+type = "#3f7d6e"
+constant = "#9a5a86"
+property = "#4f5a66"
+error = "#a4503a"
+warning = "#8a6800"
+info = "#3a6aa6"
+hint = "#46807c"
+git_add = "#3a62a6"
+git_change = "#7a5ca8"
+git_delete = "#986820"
+
+[terminal]
+contrast_min = 3.6
+chroma_max = 0.12
+lightness_min = 0.36
+lightness_max = 0.62
+
+[optimizer]
+seed = 1
+iterations = 5000
+restarts = 3
+terminal_seed = 7
+terminal_iterations = 6000

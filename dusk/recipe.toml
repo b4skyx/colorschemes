@@ -1,0 +1,56 @@
+# Design recipe for Dusk: input to `cstools optimize`.
+# colorschemes.json in this folder is the generated source of truth for every target.
+schema_version = 1
+id = "dusk"
+name = "Dusk"
+variant = "dark"
+family = "dusk"
+description = "Dusky violet with soft rose, gold, teal and lavender accents."
+tags = ["dark", "soft", "violet"]
+
+[base]
+bg = "#211e2c"
+bg_alt = "#2a2638"
+fg = "#dcd6ea"
+comment = "#7a7393"
+fg_dim = "#9d97b5"
+
+[styles]
+comment_italic = true
+keyword_italic = true
+parameter_italic = true
+
+[editor]
+contrast_min = 4.5
+chroma_max = 0.15
+hue_tolerance = 25
+lightness_min = 0.6
+lightness_max = 0.88
+
+[editor.anchors]
+keyword = "#3e8fb0"
+function = "#ebbcba"
+string = "#f6c177"
+type = "#9ccfd8"
+constant = "#c4a7e7"
+property = "#c9c3dc"
+error = "#eb6f92"
+warning = "#f6c177"
+info = "#9ccfd8"
+hint = "#c4a7e7"
+git_add = "#3e8fb0"
+git_change = "#c4a7e7"
+git_delete = "#f6c177"
+
+[terminal]
+contrast_min = 4.5
+chroma_max = 0.16
+lightness_min = 0.58
+lightness_max = 0.88
+
+[optimizer]
+seed = 1
+iterations = 5000
+restarts = 3
+terminal_seed = 7
+terminal_iterations = 6000

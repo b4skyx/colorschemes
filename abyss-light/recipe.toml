@@ -1,0 +1,56 @@
+# Design recipe for Abyss Light: input to `cstools optimize`.
+# colorschemes.json in this folder is the generated source of truth for every target.
+schema_version = 1
+id = "abyss-light"
+name = "Abyss Light"
+variant = "light"
+family = "abyss"
+description = "Crisp near-white with clear, saturated ink colours for maximum clarity."
+tags = ["light", "high-clarity", "crisp"]
+
+[base]
+bg = "#f6f7f9"
+bg_alt = "#eaedf1"
+fg = "#1f2329"
+comment = "#7a828d"
+fg_dim = "#555c66"
+
+[styles]
+comment_italic = true
+keyword_italic = false
+parameter_italic = true
+
+[editor]
+contrast_min = 4.5
+chroma_max = 0.17
+hue_tolerance = 30
+lightness_min = 0.36
+lightness_max = 0.62
+
+[editor.anchors]
+keyword = "#3a4fd0"
+function = "#0a6fb8"
+string = "#8a6500"
+type = "#0f7f5c"
+constant = "#9b3fc4"
+property = "#3d4f66"
+error = "#b4441f"
+warning = "#8a6400"
+info = "#1a63c4"
+hint = "#127f74"
+git_add = "#1d5fd0"
+git_change = "#7f4fd0"
+git_delete = "#a06000"
+
+[terminal]
+contrast_min = 4.5
+chroma_max = 0.17
+lightness_min = 0.34
+lightness_max = 0.6
+
+[optimizer]
+seed = 1
+iterations = 5000
+restarts = 3
+terminal_seed = 7
+terminal_iterations = 6000

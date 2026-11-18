@@ -1,0 +1,56 @@
+# Design recipe for Haze: input to `cstools optimize`.
+# colorschemes.json in this folder is the generated source of truth for every target.
+schema_version = 1
+id = "haze"
+name = "Haze"
+variant = "dark"
+family = "haze"
+description = "Soft, slightly warm grey with dusty accents. The lowest-contrast scheme of the set."
+tags = ["dark", "muted", "low-contrast", "warm-grey"]
+
+[base]
+bg = "#2d2f33"
+bg_alt = "#35373c"
+fg = "#c0bdb5"
+comment = "#74736f"
+fg_dim = "#94928c"
+
+[styles]
+comment_italic = true
+keyword_italic = true
+parameter_italic = true
+
+[editor]
+contrast_min = 3.6
+chroma_max = 0.085
+hue_tolerance = 35
+lightness_min = 0.58
+lightness_max = 0.84
+
+[editor.anchors]
+keyword = "#a9a3cf"
+function = "#86aecb"
+string = "#d0bd8e"
+type = "#8fbab0"
+constant = "#c8a1b4"
+property = "#b7b6ae"
+error = "#d39072"
+warning = "#d2bd80"
+info = "#88aed0"
+hint = "#97b8ac"
+git_add = "#7fa3d0"
+git_change = "#b0a0cc"
+git_delete = "#d0a874"
+
+[terminal]
+contrast_min = 3.6
+chroma_max = 0.1
+lightness_min = 0.58
+lightness_max = 0.86
+
+[optimizer]
+seed = 1
+iterations = 5000
+restarts = 3
+terminal_seed = 7
+terminal_iterations = 6000

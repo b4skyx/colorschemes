@@ -1,0 +1,56 @@
+# Design recipe for Fog: input to `cstools optimize`.
+# colorschemes.json in this folder is the generated source of truth for every target.
+schema_version = 1
+id = "fog"
+name = "Fog"
+variant = "dark"
+family = "fog"
+description = "Muted, low-contrast grey-blue with pastel accents that rely on lightness steps more than saturation."
+tags = ["dark", "muted", "low-contrast", "cool-grey"]
+
+[base]
+bg = "#2a2c30"
+bg_alt = "#313338"
+fg = "#b4b8bf"
+comment = "#6d727a"
+fg_dim = "#8c9199"
+
+[styles]
+comment_italic = true
+keyword_italic = true
+parameter_italic = true
+
+[editor]
+contrast_min = 3.6
+chroma_max = 0.08
+hue_tolerance = 35
+lightness_min = 0.58
+lightness_max = 0.84
+
+[editor.anchors]
+keyword = "#a3acc9"
+function = "#8fb4c9"
+string = "#c9bb94"
+type = "#96bfb8"
+constant = "#c4a8c4"
+property = "#a8b4be"
+error = "#d0957c"
+warning = "#cdbb84"
+info = "#8fb0cf"
+hint = "#9ab8b0"
+git_add = "#84a6d0"
+git_change = "#b3a3cc"
+git_delete = "#cfaa78"
+
+[terminal]
+contrast_min = 3.6
+chroma_max = 0.1
+lightness_min = 0.58
+lightness_max = 0.86
+
+[optimizer]
+seed = 1
+iterations = 5000
+restarts = 3
+terminal_seed = 7
+terminal_iterations = 6000

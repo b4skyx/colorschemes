@@ -1,0 +1,56 @@
+# Design recipe for Abyss: input to `cstools optimize`.
+# colorschemes.json in this folder is the generated source of truth for every target.
+schema_version = 1
+id = "abyss"
+name = "Abyss"
+variant = "dark"
+family = "abyss"
+description = "Near-black and OLED-friendly, with clear accents that stand out without glowing."
+tags = ["dark", "near-black", "oled", "high-clarity"]
+
+[base]
+bg = "#0e1014"
+bg_alt = "#15181d"
+fg = "#c3c7ce"
+comment = "#5f6670"
+fg_dim = "#80868f"
+
+[styles]
+comment_italic = true
+keyword_italic = false
+parameter_italic = true
+
+[editor]
+contrast_min = 4.5
+chroma_max = 0.17
+hue_tolerance = 30
+lightness_min = 0.6
+lightness_max = 0.88
+
+[editor.anchors]
+keyword = "#7f9cf5"
+function = "#4fb6e8"
+string = "#e6c77a"
+type = "#5fd3c0"
+constant = "#d49cf0"
+property = "#a8b8cc"
+error = "#ff8a5c"
+warning = "#f2d06b"
+info = "#59b0ff"
+hint = "#6fd6c3"
+git_add = "#4d9dff"
+git_change = "#b48cff"
+git_delete = "#f0a742"
+
+[terminal]
+contrast_min = 4.5
+chroma_max = 0.17
+lightness_min = 0.55
+lightness_max = 0.88
+
+[optimizer]
+seed = 1
+iterations = 5000
+restarts = 3
+terminal_seed = 7
+terminal_iterations = 6000

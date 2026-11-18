@@ -1,0 +1,56 @@
+# Design recipe for Dusk Light: input to `cstools optimize`.
+# colorschemes.json in this folder is the generated source of truth for every target.
+schema_version = 1
+id = "dusk-light"
+name = "Dusk Light"
+variant = "light"
+family = "dusk"
+description = "Dusk on rose-tinted paper with teal, gold and lavender inks."
+tags = ["light", "soft", "rose"]
+
+[base]
+bg = "#f7f1ec"
+bg_alt = "#efe6e0"
+fg = "#575279"
+comment = "#9893a5"
+fg_dim = "#797593"
+
+[styles]
+comment_italic = true
+keyword_italic = true
+parameter_italic = true
+
+[editor]
+contrast_min = 4.3
+chroma_max = 0.15
+hue_tolerance = 30
+lightness_min = 0.38
+lightness_max = 0.64
+
+[editor.anchors]
+keyword = "#286983"
+function = "#b4637a"
+string = "#a86a10"
+type = "#3e7f86"
+constant = "#7c55b4"
+property = "#625d86"
+error = "#b4483e"
+warning = "#9a6a00"
+info = "#2f6f9a"
+hint = "#7c55b4"
+git_add = "#286983"
+git_change = "#7c55b4"
+git_delete = "#a86a10"
+
+[terminal]
+contrast_min = 4.3
+chroma_max = 0.15
+lightness_min = 0.36
+lightness_max = 0.62
+
+[optimizer]
+seed = 1
+iterations = 5000
+restarts = 3
+terminal_seed = 7
+terminal_iterations = 6000

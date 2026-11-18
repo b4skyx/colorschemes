@@ -1,0 +1,56 @@
+# Design recipe for Haze Light: input to `cstools optimize`.
+# colorschemes.json in this folder is the generated source of truth for every target.
+schema_version = 1
+id = "haze-light"
+name = "Haze Light"
+variant = "light"
+family = "haze"
+description = "Haze on warm paper: soft, low-contrast light grey with dusty ink accents."
+tags = ["light", "muted", "low-contrast", "warm-grey"]
+
+[base]
+bg = "#e8e5de"
+bg_alt = "#dedad2"
+fg = "#46443f"
+comment = "#8c8981"
+fg_dim = "#6b6862"
+
+[styles]
+comment_italic = true
+keyword_italic = true
+parameter_italic = true
+
+[editor]
+contrast_min = 3.6
+chroma_max = 0.1
+hue_tolerance = 35
+lightness_min = 0.38
+lightness_max = 0.66
+
+[editor.anchors]
+keyword = "#5d62a0"
+function = "#3f78b0"
+string = "#8a6a1e"
+type = "#4f7a52"
+constant = "#9a5f85"
+property = "#5e5a50"
+error = "#a5502f"
+warning = "#8f6a00"
+info = "#3f6fa8"
+hint = "#4b7f7a"
+git_add = "#3d65a8"
+git_change = "#7e5fa8"
+git_delete = "#9a6a1a"
+
+[terminal]
+contrast_min = 3.6
+chroma_max = 0.12
+lightness_min = 0.36
+lightness_max = 0.62
+
+[optimizer]
+seed = 1
+iterations = 5000
+restarts = 3
+terminal_seed = 7
+terminal_iterations = 6000
