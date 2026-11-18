@@ -23,28 +23,28 @@
     "fg_dim": "#8c9199",
     "comment": "#6d727a",
     "indigo": "#848cc2",
-    "blue_6": "#9ed1fc",
-    "yellow_1": "#cdb87d",
+    "blue_pale": "#9ed1fc",
+    "yellow_deep": "#cdb87d",
     "green": "#6d9673",
     "rose_light": "#fdb9c4",
-    "blue_5": "#98afc4",
+    "blue_light": "#98afc4",
     "red": "#a17779",
-    "yellow_2": "#dec88d",
-    "blue_4": "#6991be",
+    "yellow_dark": "#dec88d",
+    "blue_soft": "#6991be",
     "cyan": "#b1d2d2",
-    "blue_1": "#5e84b0",
+    "blue_deep": "#5e84b0",
     "magenta": "#d9c2dc",
     "amber": "#cfa976",
     "rose_dark": "#ab738a",
     "lime_dark": "#80863a",
-    "yellow_3": "#e8ce81",
-    "blue_2": "#5983bd",
+    "yellow_light": "#e8ce81",
+    "blue_dark": "#5983bd",
     "purple": "#dcbbff",
     "teal_dark": "#b3ddc9",
     "rose": "#b77b90",
     "lime_light": "#889045",
-    "yellow_4": "#fedc91",
-    "blue_3": "#608dc7",
+    "yellow_pale": "#fedc91",
+    "blue_dim": "#608dc7",
     "violet": "#d9cdff",
     "teal_light": "#c2edd8"
   },
@@ -69,10 +69,10 @@
         "italic": true
       },
       "function": {
-        "fg": "blue_6"
+        "fg": "blue_pale"
       },
       "string": {
-        "fg": "yellow_1"
+        "fg": "yellow_deep"
       },
       "type": {
         "fg": "green"
@@ -87,7 +87,7 @@
         "fg": "syntax.constant"
       },
       "property": {
-        "fg": "blue_5"
+        "fg": "blue_light"
       },
       "parameter": {
         "fg": "ui.fg",
@@ -141,13 +141,13 @@
     },
     "diagnostic": {
       "error": "red",
-      "warning": "yellow_2",
-      "info": "blue_4",
+      "warning": "yellow_dark",
+      "info": "blue_soft",
       "hint": "cyan",
       "ok": "git.add"
     },
     "git": {
-      "add": "blue_1",
+      "add": "blue_deep",
       "change": "magenta",
       "delete": "amber"
     }
@@ -168,8 +168,8 @@
       },
       "red": "rose_dark",
       "green": "lime_dark",
-      "yellow": "yellow_3",
-      "blue": "blue_2",
+      "yellow": "yellow_light",
+      "blue": "blue_dark",
       "magenta": "purple",
       "cyan": "teal_dark",
       "white": "fg"
@@ -178,8 +178,8 @@
       "black": "comment",
       "red": "rose",
       "green": "lime_light",
-      "yellow": "yellow_4",
-      "blue": "blue_3",
+      "yellow": "yellow_pale",
+      "blue": "blue_dim",
       "magenta": "violet",
       "cyan": "teal_light",
       "white": {

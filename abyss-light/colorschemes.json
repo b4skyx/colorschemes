@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "id": "abyss-light",
+  "name": "Abyss Light",
+  "variant": "light",
+  "family": "abyss",
+  "description": "Crisp near-white with clear, saturated ink colours for maximum clarity.",
+  "tags": [
+    "light",
+    "high-clarity",
+    "crisp"
+  ],
+  "designed_for": {
+    "vision": "deutan",
+    "severity": 1.0,
+    "metric": "CIEDE2000 on simulated colours"
+  },
+  "palette": {
+    "bg": "#f6f7f9",
+    "bg_alt": "#eaedf1",
+    "fg": "#1f2329",
+    "fg_dim": "#555c66",
+    "comment": "#7a828d",
+    "indigo_dark": "#072f94",
+    "blue_pale": "#0972d2",
+    "yellow": "#906a00",
+    "teal_deep": "#026d44",
+    "pink": "#8c2369",
+    "blue_dark": "#3e4f66",
+    "rose_light": "#720b2f",
+    "amber_light": "#956a09",
+    "blue_light": "#1663c6",
+    "teal_pale": "#177f74",
+    "blue_deep": "#083f68",
+    "purple_light": "#8a59c9",
+    "amber_dark": "#a06002",
+    "rose": "#66092c",
+    "teal_light": "#0f7e50",
+    "orange_light": "#b45901",
+    "magenta": "#5c0265",
+    "cyan": "#197e7d",
+    "rose_dark": "#550226",
+    "green": "#065b13",
+    "orange_dark": "#af4a07",
+    "indigo_light": "#3063ca",
+    "purple_dark": "#41025f",
+    "teal_dark": "#0b766b"
+  },
+  "roles": {
+    "ui": {
+      "bg": "bg",
+      "bg_alt": "bg_alt",
+      "fg": "fg",
+      "fg_dim": "fg_dim",
+      "comment": "comment"
+    },
+    "syntax": {
+      "variable": {
+        "fg": "ui.fg"
+      },
+      "comment": {
+        "fg": "ui.comment",
+        "italic": true
+      },
+      "keyword": {
+        "fg": "indigo_dark"
+      },
+      "function": {
+        "fg": "blue_pale"
+      },
+      "string": {
+        "fg": "yellow"
+      },
+      "type": {
+        "fg": "teal_deep"
+      },
+      "constant": {
+        "fg": "pink"
+      },
+      "number": {
+        "fg": "syntax.constant"
+      },
+      "boolean": {
+        "fg": "syntax.constant"
+      },
+      "property": {
+        "fg": "blue_dark"
+      },
+      "parameter": {
+        "fg": "ui.fg",
+        "italic": true
+      },
+      "builtin": {
+        "fg": "syntax.constant",
+        "italic": true
+      },
+      "operator": {
+        "fg": "ui.fg_dim"
+      },
+      "punctuation": {
+        "fg": "ui.fg_dim"
+      },
+      "module": {
+        "fg": "syntax.type",
+        "italic": true
+      },
+      "attribute": {
+        "fg": "syntax.keyword"
+      },
+      "tag": {
+        "fg": "syntax.keyword"
+      },
+      "escape": {
+        "fg": "syntax.constant"
+      },
+      "regex": {
+        "fg": "syntax.constant"
+      },
+      "macro": {
+        "fg": "syntax.keyword"
+      },
+      "constructor": {
+        "fg": "syntax.type"
+      },
+      "label": {
+        "fg": "syntax.keyword"
+      },
+      "todo": {
+        "fg": "ui.bg",
+        "bg": "diagnostic.warning",
+        "bold": true
+      },
+      "note": {
+        "fg": "ui.bg",
+        "bg": "diagnostic.info",
+        "bold": true
+      }
+    },
+    "diagnostic": {
+      "error": "rose_light",
+      "warning": "amber_light",
+      "info": "blue_light",
+      "hint": "teal_pale",
+      "ok": "git.add"
+    },
+    "git": {
+      "add": "blue_deep",
+      "change": "purple_light",
+      "delete": "amber_dark"
+    }
+  },
+  "terminal": {
+    "background": "bg",
+    "foreground": "fg",
+    "cursor": "fg",
+    "cursor_text": "bg",
+    "selection_background": "bg_visual",
+    "selection_foreground": "fg",
+    "normal": {
+      "black": {
+        "lighten": [
+          "fg",
+          0.1
+        ]
+      },
+      "red": "rose",
+      "green": "teal_light",
+      "yellow": "orange_light",
+      "blue": "blue_pale",
+      "magenta": "magenta",
+      "cyan": "cyan",
+      "white": {
+        "darken": [
+          "bg_alt",
+          0.06
+        ]
+      }
+    },
+    "bright": {
+      "black": "comment",
+      "red": "rose_dark",
+      "green": "green",
+      "yellow": "orange_dark",
+      "blue": "indigo_light",
+      "magenta": "purple_dark",
+      "cyan": "teal_dark",
+      "white": "bg_alt"
+    }
+  }
+}

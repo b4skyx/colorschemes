@@ -1,0 +1,193 @@
+{
+  "schema_version": 2,
+  "id": "haze-light",
+  "name": "Haze Light",
+  "variant": "light",
+  "family": "haze",
+  "description": "Haze on warm paper: soft, low-contrast light grey with dusty ink accents.",
+  "tags": [
+    "light",
+    "muted",
+    "low-contrast",
+    "warm-grey"
+  ],
+  "designed_for": {
+    "vision": "deutan",
+    "severity": 1.0,
+    "metric": "CIEDE2000 on simulated colours"
+  },
+  "palette": {
+    "bg": "#e8e5de",
+    "bg_alt": "#dedad2",
+    "fg": "#46443f",
+    "fg_dim": "#6b6862",
+    "comment": "#8c8981",
+    "indigo_light": "#2e3d77",
+    "blue_light": "#3f78b0",
+    "yellow_light": "#906f23",
+    "green": "#334c00",
+    "pink": "#8d5577",
+    "grey": "#5f5846",
+    "rose": "#a46471",
+    "amber": "#5b3c00",
+    "blue": "#3f6fa8",
+    "cyan_light": "#074d47",
+    "indigo": "#243f77",
+    "magenta": "#98678a",
+    "amber_light": "#9a6a1a",
+    "rose_light": "#af5c79",
+    "lime": "#7f7900",
+    "amber_dark": "#4f3601",
+    "blue_dark": "#063b7b",
+    "purple_light": "#9064af",
+    "teal": "#05473f",
+    "rose_dark": "#9c5a73",
+    "yellow_dark": "#786f02",
+    "orange": "#572001",
+    "indigo_dark": "#14296d",
+    "purple_dark": "#7f5daa",
+    "cyan_dark": "#003935"
+  },
+  "roles": {
+    "ui": {
+      "bg": "bg",
+      "bg_alt": "bg_alt",
+      "fg": "fg",
+      "fg_dim": "fg_dim",
+      "comment": "comment"
+    },
+    "syntax": {
+      "variable": {
+        "fg": "ui.fg"
+      },
+      "comment": {
+        "fg": "ui.comment",
+        "italic": true
+      },
+      "keyword": {
+        "fg": "indigo_light",
+        "italic": true
+      },
+      "function": {
+        "fg": "blue_light"
+      },
+      "string": {
+        "fg": "yellow_light"
+      },
+      "type": {
+        "fg": "green"
+      },
+      "constant": {
+        "fg": "pink"
+      },
+      "number": {
+        "fg": "syntax.constant"
+      },
+      "boolean": {
+        "fg": "syntax.constant"
+      },
+      "property": {
+        "fg": "grey"
+      },
+      "parameter": {
+        "fg": "ui.fg",
+        "italic": true
+      },
+      "builtin": {
+        "fg": "syntax.constant",
+        "italic": true
+      },
+      "operator": {
+        "fg": "ui.fg_dim"
+      },
+      "punctuation": {
+        "fg": "ui.fg_dim"
+      },
+      "module": {
+        "fg": "syntax.type",
+        "italic": true
+      },
+      "attribute": {
+        "fg": "syntax.keyword"
+      },
+      "tag": {
+        "fg": "syntax.keyword"
+      },
+      "escape": {
+        "fg": "syntax.constant"
+      },
+      "regex": {
+        "fg": "syntax.constant"
+      },
+      "macro": {
+        "fg": "syntax.keyword"
+      },
+      "constructor": {
+        "fg": "syntax.type"
+      },
+      "label": {
+        "fg": "syntax.keyword"
+      },
+      "todo": {
+        "fg": "ui.bg",
+        "bg": "diagnostic.warning",
+        "bold": true
+      },
+      "note": {
+        "fg": "ui.bg",
+        "bg": "diagnostic.info",
+        "bold": true
+      }
+    },
+    "diagnostic": {
+      "error": "rose",
+      "warning": "amber",
+      "info": "blue",
+      "hint": "cyan_light",
+      "ok": "git.add"
+    },
+    "git": {
+      "add": "indigo",
+      "change": "magenta",
+      "delete": "amber_light"
+    }
+  },
+  "terminal": {
+    "background": "bg",
+    "foreground": "fg",
+    "cursor": "fg",
+    "cursor_text": "bg",
+    "selection_background": "bg_visual",
+    "selection_foreground": "fg",
+    "normal": {
+      "black": {
+        "lighten": [
+          "fg",
+          0.1
+        ]
+      },
+      "red": "rose_light",
+      "green": "lime",
+      "yellow": "amber_dark",
+      "blue": "blue_dark",
+      "magenta": "purple_light",
+      "cyan": "teal",
+      "white": {
+        "darken": [
+          "bg_alt",
+          0.06
+        ]
+      }
+    },
+    "bright": {
+      "black": "comment",
+      "red": "rose_dark",
+      "green": "yellow_dark",
+      "yellow": "orange",
+      "blue": "indigo_dark",
+      "magenta": "purple_dark",
+      "cyan": "cyan_dark",
+      "white": "bg_alt"
+    }
+  }
+}

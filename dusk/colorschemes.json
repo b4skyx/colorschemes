@@ -23,29 +23,29 @@
     "comment": "#7a7393",
     "blue_light": "#4988e2",
     "red_light": "#fec8be",
-    "amber_1": "#fdb843",
-    "teal_2": "#88a69e",
+    "amber_deep": "#fdb843",
+    "teal_dark": "#88a69e",
     "purple_dark": "#c9a7ff",
-    "violet_2": "#bcb8d4",
+    "violet_dark": "#bcb8d4",
     "rose": "#d46483",
-    "amber_4": "#fdc67b",
+    "amber_pale": "#fdc67b",
     "cyan": "#a3d5dd",
-    "violet_1": "#a085e8",
+    "violet_deep": "#a085e8",
     "sky": "#1e91b9",
     "purple_light": "#dfcefd",
-    "amber_2": "#f6c177",
+    "amber_dark": "#f6c177",
     "pink": "#c9659c",
     "green": "#189a55",
-    "amber_3": "#fec269",
+    "amber_light": "#fec269",
     "blue_dark": "#4486e6",
-    "violet_3": "#cbb9ff",
-    "teal_3": "#92edd2",
+    "violet_light": "#cbb9ff",
+    "teal_light": "#92edd2",
     "red_dark": "#ec6b7e",
-    "teal_1": "#1ea08c",
+    "teal_deep": "#1ea08c",
     "yellow": "#ffe050",
     "indigo": "#558ef1",
-    "violet_4": "#cbc9ff",
-    "teal_4": "#9cffe2"
+    "violet_pale": "#cbc9ff",
+    "teal_pale": "#9cffe2"
   },
   "roles": {
     "ui": {
@@ -71,10 +71,10 @@
         "fg": "red_light"
       },
       "string": {
-        "fg": "amber_1"
+        "fg": "amber_deep"
       },
       "type": {
-        "fg": "teal_2"
+        "fg": "teal_dark"
       },
       "constant": {
         "fg": "purple_dark"
@@ -86,7 +86,7 @@
         "fg": "syntax.constant"
       },
       "property": {
-        "fg": "violet_2"
+        "fg": "violet_dark"
       },
       "parameter": {
         "fg": "ui.fg",
@@ -140,15 +140,15 @@
     },
     "diagnostic": {
       "error": "rose",
-      "warning": "amber_4",
+      "warning": "amber_pale",
       "info": "cyan",
-      "hint": "violet_1",
+      "hint": "violet_deep",
       "ok": "git.add"
     },
     "git": {
       "add": "sky",
       "change": "purple_light",
-      "delete": "amber_2"
+      "delete": "amber_dark"
     }
   },
   "terminal": {
@@ -167,20 +167,20 @@
       },
       "red": "pink",
       "green": "green",
-      "yellow": "amber_3",
+      "yellow": "amber_light",
       "blue": "blue_dark",
-      "magenta": "violet_3",
-      "cyan": "teal_3",
+      "magenta": "violet_light",
+      "cyan": "teal_light",
       "white": "fg"
     },
     "bright": {
       "black": "comment",
       "red": "red_dark",
-      "green": "teal_1",
+      "green": "teal_deep",
       "yellow": "yellow",
       "blue": "indigo",
-      "magenta": "violet_4",
-      "cyan": "teal_4",
+      "magenta": "violet_pale",
+      "cyan": "teal_pale",
       "white": {
         "raise": [
           "fg",

@@ -1,0 +1,193 @@
+{
+  "schema_version": 2,
+  "id": "fog-light",
+  "name": "Fog Light",
+  "variant": "light",
+  "family": "fog",
+  "description": "Fog in daylight: cool grey-blue paper with muted ink accents that rely on lightness steps.",
+  "tags": [
+    "light",
+    "muted",
+    "low-contrast",
+    "cool-grey"
+  ],
+  "designed_for": {
+    "vision": "deutan",
+    "severity": 1.0,
+    "metric": "CIEDE2000 on simulated colours"
+  },
+  "palette": {
+    "bg": "#e4e7eb",
+    "bg_alt": "#d9dde2",
+    "fg": "#3d434b",
+    "fg_dim": "#646b74",
+    "comment": "#868d96",
+    "indigo_light": "#31407b",
+    "blue_pale": "#497ab1",
+    "yellow_dark": "#916e23",
+    "green": "#316b47",
+    "pink": "#8e5277",
+    "grey": "#4e5b6a",
+    "red_light": "#672f35",
+    "yellow_light": "#946f13",
+    "blue_light": "#3168a2",
+    "teal_light": "#4b8177",
+    "blue_dark": "#164276",
+    "magenta": "#956989",
+    "amber": "#976826",
+    "red_dark": "#6d1b1b",
+    "teal": "#14845e",
+    "amber_light": "#a16d04",
+    "blue_deep": "#083e77",
+    "purple_light": "#8968b6",
+    "cyan_light": "#3a7978",
+    "rose": "#5a0d26",
+    "teal_dark": "#2b784d",
+    "amber_dark": "#906816",
+    "indigo_dark": "#0a2a6c",
+    "purple_dark": "#7f5fab",
+    "cyan_dark": "#2c716b"
+  },
+  "roles": {
+    "ui": {
+      "bg": "bg",
+      "bg_alt": "bg_alt",
+      "fg": "fg",
+      "fg_dim": "fg_dim",
+      "comment": "comment"
+    },
+    "syntax": {
+      "variable": {
+        "fg": "ui.fg"
+      },
+      "comment": {
+        "fg": "ui.comment",
+        "italic": true
+      },
+      "keyword": {
+        "fg": "indigo_light",
+        "italic": true
+      },
+      "function": {
+        "fg": "blue_pale"
+      },
+      "string": {
+        "fg": "yellow_dark"
+      },
+      "type": {
+        "fg": "green"
+      },
+      "constant": {
+        "fg": "pink"
+      },
+      "number": {
+        "fg": "syntax.constant"
+      },
+      "boolean": {
+        "fg": "syntax.constant"
+      },
+      "property": {
+        "fg": "grey"
+      },
+      "parameter": {
+        "fg": "ui.fg",
+        "italic": true
+      },
+      "builtin": {
+        "fg": "syntax.constant",
+        "italic": true
+      },
+      "operator": {
+        "fg": "ui.fg_dim"
+      },
+      "punctuation": {
+        "fg": "ui.fg_dim"
+      },
+      "module": {
+        "fg": "syntax.type",
+        "italic": true
+      },
+      "attribute": {
+        "fg": "syntax.keyword"
+      },
+      "tag": {
+        "fg": "syntax.keyword"
+      },
+      "escape": {
+        "fg": "syntax.constant"
+      },
+      "regex": {
+        "fg": "syntax.constant"
+      },
+      "macro": {
+        "fg": "syntax.keyword"
+      },
+      "constructor": {
+        "fg": "syntax.type"
+      },
+      "label": {
+        "fg": "syntax.keyword"
+      },
+      "todo": {
+        "fg": "ui.bg",
+        "bg": "diagnostic.warning",
+        "bold": true
+      },
+      "note": {
+        "fg": "ui.bg",
+        "bg": "diagnostic.info",
+        "bold": true
+      }
+    },
+    "diagnostic": {
+      "error": "red_light",
+      "warning": "yellow_light",
+      "info": "blue_light",
+      "hint": "teal_light",
+      "ok": "git.add"
+    },
+    "git": {
+      "add": "blue_dark",
+      "change": "magenta",
+      "delete": "amber"
+    }
+  },
+  "terminal": {
+    "background": "bg",
+    "foreground": "fg",
+    "cursor": "fg",
+    "cursor_text": "bg",
+    "selection_background": "bg_visual",
+    "selection_foreground": "fg",
+    "normal": {
+      "black": {
+        "lighten": [
+          "fg",
+          0.1
+        ]
+      },
+      "red": "red_dark",
+      "green": "teal",
+      "yellow": "amber_light",
+      "blue": "blue_deep",
+      "magenta": "purple_light",
+      "cyan": "cyan_light",
+      "white": {
+        "darken": [
+          "bg_alt",
+          0.06
+        ]
+      }
+    },
+    "bright": {
+      "black": "comment",
+      "red": "rose",
+      "green": "teal_dark",
+      "yellow": "amber_dark",
+      "blue": "indigo_dark",
+      "magenta": "purple_dark",
+      "cyan": "cyan_dark",
+      "white": "bg_alt"
+    }
+  }
+}

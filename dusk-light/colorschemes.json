@@ -1,0 +1,188 @@
+{
+  "schema_version": 2,
+  "id": "dusk-light",
+  "name": "Dusk Light",
+  "variant": "light",
+  "family": "dusk",
+  "description": "Dusk on rose-tinted paper with teal, gold and lavender inks.",
+  "tags": [
+    "light",
+    "soft",
+    "rose"
+  ],
+  "designed_for": {
+    "vision": "deutan",
+    "severity": 1.0,
+    "metric": "CIEDE2000 on simulated colours"
+  },
+  "palette": {
+    "bg": "#f7f1ec",
+    "bg_alt": "#efe6e0",
+    "fg": "#575279",
+    "fg_dim": "#797593",
+    "comment": "#9893a5",
+    "cyan_light": "#244a4b",
+    "red_light": "#b55264",
+    "amber_light": "#a16405",
+    "cyan_pale": "#457b75",
+    "violet_light": "#845ec1",
+    "violet_dark": "#6e6791",
+    "rose": "#6f2436",
+    "amber": "#976900",
+    "blue": "#20475d",
+    "violet": "#815fc3",
+    "cyan": "#224a4b",
+    "red": "#720919",
+    "teal_light": "#0b8168",
+    "indigo": "#02358a",
+    "cyan_dark": "#034642",
+    "red_dark": "#610105",
+    "teal_dark": "#13775b",
+    "amber_dark": "#8f5f02",
+    "indigo_dark": "#0e227a",
+    "indigo_light": "#4e63c3",
+    "cyan_deep": "#013934"
+  },
+  "roles": {
+    "ui": {
+      "bg": "bg",
+      "bg_alt": "bg_alt",
+      "fg": "fg",
+      "fg_dim": "fg_dim",
+      "comment": "comment"
+    },
+    "syntax": {
+      "variable": {
+        "fg": "ui.fg"
+      },
+      "comment": {
+        "fg": "ui.comment",
+        "italic": true
+      },
+      "keyword": {
+        "fg": "cyan_light",
+        "italic": true
+      },
+      "function": {
+        "fg": "red_light"
+      },
+      "string": {
+        "fg": "amber_light"
+      },
+      "type": {
+        "fg": "cyan_pale"
+      },
+      "constant": {
+        "fg": "violet_light"
+      },
+      "number": {
+        "fg": "syntax.constant"
+      },
+      "boolean": {
+        "fg": "syntax.constant"
+      },
+      "property": {
+        "fg": "violet_dark"
+      },
+      "parameter": {
+        "fg": "ui.fg",
+        "italic": true
+      },
+      "builtin": {
+        "fg": "syntax.constant",
+        "italic": true
+      },
+      "operator": {
+        "fg": "ui.fg_dim"
+      },
+      "punctuation": {
+        "fg": "ui.fg_dim"
+      },
+      "module": {
+        "fg": "syntax.type",
+        "italic": true
+      },
+      "attribute": {
+        "fg": "syntax.keyword"
+      },
+      "tag": {
+        "fg": "syntax.keyword"
+      },
+      "escape": {
+        "fg": "syntax.constant"
+      },
+      "regex": {
+        "fg": "syntax.constant"
+      },
+      "macro": {
+        "fg": "syntax.keyword"
+      },
+      "constructor": {
+        "fg": "syntax.type"
+      },
+      "label": {
+        "fg": "syntax.keyword"
+      },
+      "todo": {
+        "fg": "ui.bg",
+        "bg": "diagnostic.warning",
+        "bold": true
+      },
+      "note": {
+        "fg": "ui.bg",
+        "bg": "diagnostic.info",
+        "bold": true
+      }
+    },
+    "diagnostic": {
+      "error": "rose",
+      "warning": "amber",
+      "info": "blue",
+      "hint": "violet",
+      "ok": "git.add"
+    },
+    "git": {
+      "add": "cyan",
+      "change": "violet",
+      "delete": "amber_light"
+    }
+  },
+  "terminal": {
+    "background": "bg",
+    "foreground": "fg",
+    "cursor": "fg",
+    "cursor_text": "bg",
+    "selection_background": "bg_visual",
+    "selection_foreground": "fg",
+    "normal": {
+      "black": {
+        "lighten": [
+          "fg",
+          0.1
+        ]
+      },
+      "red": "red",
+      "green": "teal_light",
+      "yellow": "amber",
+      "blue": "indigo",
+      "magenta": "violet_light",
+      "cyan": "cyan_dark",
+      "white": {
+        "darken": [
+          "bg_alt",
+          0.06
+        ]
+      }
+    },
+    "bright": {
+      "black": "comment",
+      "red": "red_dark",
+      "green": "teal_dark",
+      "yellow": "amber_dark",
+      "blue": "indigo_dark",
+      "magenta": "indigo_light",
+      "cyan": "cyan_deep",
+      "white": "bg_alt"
+    }
+  }
+}
