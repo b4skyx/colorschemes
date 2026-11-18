@@ -1,0 +1,8 @@
+[project]
+name = "clearsight"
+lua_module = "clearsight"
+url = ""
+
+[build]
+schemes = ["haze", "fog", "abyss", "dusk"]
+targets = ["alacritty", "kitty", "wezterm", "ghostty", "rio", "tmux", "fish", "starship", "fzf", "bat", "delta", "lazygit", "eza", "yazi", "vim", "neovim", "lualine"]
