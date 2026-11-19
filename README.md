@@ -96,6 +96,7 @@ Replace `haze` with any scheme folder.
 | lazygit | `haze/lazygit.yml` | merge the `gui.theme` block into `~/.config/lazygit/config.yml` |
 | eza | `haze/eza.yml` | copy to `~/.config/eza/theme.yml` (or point `EZA_CONFIG_DIR` at a folder containing it) |
 | yazi | `haze/yazi/haze.yazi/` | copy to `~/.config/yazi/flavors/`, set `[flavor] dark = "haze"` in `theme.toml` |
+| pi | `haze/pi/Haze.json` | copy to `~/.pi/agent/themes/`, then select `Haze` under Theme in `/settings` (or `.pi/themes/` in a project) |
 
 ## How it's built
 Everything except `<id>/recipe.toml` and `<id>/colorschemes.json` is **generated** by

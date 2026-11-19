@@ -5,4 +5,4 @@ url = "https://github.com/b4skyx/colorschemes"
 
 [build]
 schemes = ["haze", "fog", "abyss", "dusk", "haze-light", "fog-light", "abyss-light", "dusk-light"]
-targets = ["alacritty", "kitty", "wezterm", "ghostty", "rio", "tmux", "fish", "starship", "fzf", "delta", "lazygit", "eza", "yazi", "vim", "neovim", "lualine"]
+targets = ["alacritty", "kitty", "wezterm", "ghostty", "rio", "tmux", "fish", "starship", "fzf", "delta", "lazygit", "eza", "yazi", "vim", "neovim", "lualine", "pi"]
